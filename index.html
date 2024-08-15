@@ -3,12 +3,54 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+            rel="stylesheet"
+        />
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Alpine Tailwind</title>
+        <link
+            rel="shortcut icon"
+            type="image/png"
+            href="https://img.icons8.com/ultraviolet/40/crown.png"
+        />
 
         <style type="text/tailwindcss">
+            :root {
+                --primary: rgb(88, 40, 244);
+                --primary-hover: rgb(69, 29, 200);
+            }
+            html,
+            body {
+                @apply h-full;
+            }
+            body {
+                @apply flex flex-col;
+            }
+            main {
+                @apply flex-grow;
+            }
+            .titleBlip {
+                animation: 10s fadeIn;
+            }
+            h1 {
+                font-size: 4rem;
+                line-height: 1.2;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                font-family: "Lobster";
+            }
+            .button {
+                @apply inline-flex flex-wrap items-center justify-center flex-shrink-0 text-center rounded-md py-2 px-4 min-h-10 font-semibold shadow-md transition-transform duration-200 cursor-pointer bg-[--primary] text-white hover:bg-[--primary-hover] active:scale-95;
+            }
+
             .nav_items > li > a {
                 @apply flex items-center px-4 h-12 gap-2 rounded-xl hover:bg-gray-700;
+            }
+            .sticky-footer {
+                @apply mt-auto;
             }
         </style>
     </head>
@@ -42,11 +84,76 @@
                                 src="https://img.icons8.com/officel/80/homer-simpson.png"
                                 alt="homer-simpson"
                             />JCC
-                            <img class="w-4" src="https://img.icons8.com/nolan/64/chevron-down.png" alt="chevron-down"/>
+                            <img
+                                class="w-4"
+                                src="https://img.icons8.com/nolan/64/chevron-down.png"
+                                alt="chevron-down"
+                            />
                         </a>
                     </li>
                 </ul>
             </nav>
         </header>
+
+        <hero
+            class="grid bg-gray-700 text-white text-center bg-cover z-10 relative bg-[url('https://live.staticflickr.com/65535/49909538937_3255dcf9e7_b.jpg')]"
+        >
+            <div
+                class="col-start-1 row-start-1 bg-gray-800 bg-opacity-40 w-full h-full"
+            ></div>
+            <div class="col-start-1 row-start-1 py-8 px-10">
+                <h1 class="titleBlip">JCC Producciones</h1>
+                <p class="text-lg font-bold mb-5">julio.corbaz@gmail.com</p>
+                <a class="button" href="">Get Started</a>
+            </div>
+        </hero>
+
+        <!-- footer redes sociales -->
+        <footer class="bg-gray-800 text-white text-center py-5 sticky-footer">
+            <ul class="flex items-center justify-center gap-4">
+                <li>
+                    <a
+                        href="https://www.facebook.com/JulioCorbaz"
+                        target="_blank"
+                    >
+                        <img
+                            class="h-8"
+                            src="https://img.icons8.com/ios/50/ffffff/facebook--v1.png"
+                            alt="facebook"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://www.instagram.com/julio.cesar.corbaz"
+                        target="_blank"
+                    >
+                        <img
+                            class="h-8"
+                            src="https://img.icons8.com/ios/50/ffffff/instagram-new--v1.png"
+                            alt="instagram"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img
+                            class="h-8"
+                            src="https://img.icons8.com/ios/50/ffffff/twitter--v1.png"
+                            alt="twitter"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img
+                            class="h-8"
+                            src="https://img.icons8.com/ios/50/ffffff/youtube--v1.png"
+                            alt="youtube"
+                        />
+                    </a>
+                </li>
+            </ul>
+        </footer>
     </body>
 </html>
