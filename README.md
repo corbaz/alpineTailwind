@@ -1,10 +1,6 @@
-# Informe Veraz - Derecho de Acceso
+# Derecho de Acceso
 
 ## Identificación del Cliente
-- Nombre: JULIO CESAR CORBAZ
-- Sexo: MASCULINO
-- DNI: 18404995
-- Fecha de Nacimiento: 04/08/1967
 - Domicilio: GENERAL PUEYRREDON, BS.AIRES
 
 ## Información Crediticia

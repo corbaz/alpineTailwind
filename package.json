@@ -1,0 +1,19 @@
+{
+    "name": "alpinetailwind",
+    "module": "index.html",
+    "type": "module",
+    "version": "1.0.0",
+    "description": "Alpine.js and TailwindCSS",
+    "main": "index.html",
+    "scripts": {
+        "publish": "surge ./ jcc.surge.sh",
+        "list": "surge list",
+        "remove": "surge teardown"
+    },
+    "devDependencies": {
+        "@types/bun": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    }
+}
